@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Registro | Dulce Tentación</title>
-  <link rel="stylesheet" href="./css/stylesregistro.css" />
+  <link rel="stylesheet" href="/css/stylesregistro.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,30 +12,36 @@
   <div class="right-side">
     <div class="contenido-derecho">
       <div class="form-container">
-        <h1 class="titulo-pagina">🎂 Bienvenidos a Dulce Encanto 🍩</h1>
+        <h1 class="titulo-pagina">🎂 Bienvenidos a Dulce Tentación 🍩</h1>
         <h2>Crear Cuenta</h2>
-        <form action="./registro" method="POST">
-          <input type="text" name="usuario" placeholder="Nombre de usuario" required />
-          <input type="email" name="correo" placeholder="Correo electrónico" required />
-          <input type="tel" name="celular" placeholder="Número de celular" required pattern="[0-9]{10}" />
-          <input type="password" name="contraseña" placeholder="Contraseña" required />
-          <button type="submit" id="boton-registro">
+        <form action="/registro" method="POST" aria-labelledby="form-registro">
+          <label for="usuario">Nombre de usuario</label>
+          <input type="text" id="usuario" name="usuario" required aria-required="true" />
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required aria-required="true" />
+
+          <label for="celular">Número de celular</label>
+          <input type="tel" id="celular" name="celular" pattern="[0-9]{10}" required aria-required="true" />
+
+          <label for="contraseña">Contraseña</label>
+          <input type="password" id="contraseña" name="contraseña" required aria-required="true" />
+
+          <button type="submit" id="boton-registro" aria-label="Registrarse">
             <span class="texto-boton">📫 Registrarse</span>
-            <img class="icono-boton" src="./img/registro/ok-check.png" alt="Registrado" />
+            <img class="icono-boton" src="/img/registro/ok-check.png" alt="" aria-hidden="true" />
           </button>
         </form>
 
         <div class="switch-form">
-  ¿Ya tienes cuenta? <a href="#" id="cambiar-a-login">Inicia sesión</a>
-</div>
-
+          ¿Ya tienes cuenta?
+          <a href="#" id="enlace-login" aria-label="Iniciar sesión en Dulce Tentación">Inicia sesión</a>
+        </div>
       </div>
-
-      
     </div>
   </div>
 
-  <script src="./js/registro.js"></script>
+  <script src="/js/registro.js"></script>
 </body>
 </html>
 
