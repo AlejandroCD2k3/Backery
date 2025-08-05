@@ -29,7 +29,7 @@ body {
 /* ============================== */
 .left-side {
   flex: 1;
-  background-image: url('/img/registro/donas.png');
+  background-image: url('./img/registro/donas.png');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -231,3 +231,4 @@ body {
     filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
   }
 }
+
