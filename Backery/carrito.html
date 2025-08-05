@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Carrito - Dulce Tentación</title>
+  <link rel="stylesheet" href="css/stylescarrito.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="titulo-pagina">Dulce Tentación</h1>
+    </div>
+  </header>
+
+    <div class="carrito-wrapper">
+        <!-- IZQUIERDA: Lista de productos -->
+        <div class="carrito-izquierda">
+            <div class="carrito-container">
+            <h2 class="titulo-carrito">🛒 Tu Carrito</h2>
+
+            <div class="producto-carrito">
+                <img src="/img/inicio/pastel-chocolate.jpg" alt="Pastel de Chocolate" class="img-carrito" />
+                <h3>Pastel de Chocolate</h3>
+                <p>$25.000</p>
+            </div>
+
+            <div class="producto-carrito">
+                <img src="/img/inicio/cheesecake.jpg" alt="Cheesecake de Fresa" class="img-carrito" />
+                <h3>Cheesecake de Fresa</h3>
+                <p>$30.000</p>
+            </div>
+
+            <div class="producto-carrito">
+                <img src="/img/inicio/cupcakes.jpg" alt="Cupcakes variados" class="img-carrito" />
+                <h3>Cupcakes Variados</h3>
+                <p>$18.000</p>
+            </div>
+
+            <p id="mensaje-compra" class="mensaje-compra" style="display: none;">
+                ¡Gracias por tu compra! 💵🍰
+            </p>
+            </div>
+        </div>
+
+        <!-- DERECHA: Formulario PSE -->
+        <div class="carrito-derecha">
+            <div class="formulario-pse">
+            <h3>
+                <img src="/img/carrito/pse.png" alt="PSE" class="icono-pse" /><br>
+                Formulario de pago PSE
+            </h3>
+
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" placeholder="Tu nombre completo" />
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" placeholder="tucorreo@ejemplo.com" />
+
+            <label for="banco">Banco:</label>
+            <select id="banco">
+                <option value="">Selecciona tu banco</option>
+                <option>Bancolombia</option>
+                <option>Banco de Bogotá</option>
+                <option>Davivienda</option>
+                <option>Nequi</option>
+                <option>Otro</option>
+            </select>
+
+            <label for="tipo-cuenta">Tipo de cuenta:</label>
+            <select id="tipo-cuenta">
+                <option value="">Selecciona tipo de cuenta</option>
+                <option>Ahorros</option>
+                <option>Corriente</option>
+            </select>
+
+            <button class="boton-pagar" onclick="realizarPago()">
+                <img src="/img/inicio/pago.png" alt="Pagar" />
+                Pagar ahora
+            </button>
+
+            <button class="boton-volver" onclick="window.location.href='inicioPasteleria.html'">
+                Volver a comprar
+            </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MENSAJE DE AGRADECIMIENTO FINAL -->
+    <div id="mensaje-final" class="mensaje-final" style="display: none;">
+        <h2>🎉 ¡Gracias por su compra! 🎉</h2>
+        <p>Tu pedido ha sido recibido con mucho cariño 💖</p>
+        <button onclick="window.location.href='inicioPasteleria.html'" class="boton-volver-inicio">
+            Volver al inicio
+        </button>
+    </div>
+
+
+  <script src="/js/pago.js"></script>
+</body>
+</html>
+
+
+

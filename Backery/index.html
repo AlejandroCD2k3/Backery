@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro | Dulce Tentación</title>
+  <link rel="stylesheet" href="/css/stylesregistro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="left-side"></div>
+  <div class="right-side">
+    <div class="contenido-derecho">
+      <div class="form-container">
+        <h1 class="titulo-pagina">🎂 Bienvenidos a Dulce Encanto 🍩</h1>
+        <h2>Crear Cuenta</h2>
+        <form action="/registro" method="POST">
+          <input type="text" name="usuario" placeholder="Nombre de usuario" required />
+          <input type="email" name="correo" placeholder="Correo electrónico" required />
+          <input type="tel" name="celular" placeholder="Número de celular" required pattern="[0-9]{10}" />
+          <input type="password" name="contraseña" placeholder="Contraseña" required />
+          <button type="submit" id="boton-registro">
+            <span class="texto-boton">📫 Registrarse</span>
+            <img class="icono-boton" src="/img/registro/ok-check.png" alt="Registrado" />
+          </button>
+        </form>
+
+        <div class="switch-form">
+  ¿Ya tienes cuenta? <a href="#" id="cambiar-a-login">Inicia sesión</a>
+</div>
+
+      </div>
+
+      
+    </div>
+  </div>
+
+  <script src="/js/registro.js"></script>
+</body>
+</html>

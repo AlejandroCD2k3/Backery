@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dulce Tentación - Inicio</title>
+  <link rel="stylesheet" href="css/stylesinicio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="titulo-pagina">Dulce Tentación</h1>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="#productos">
+              <img src="/img/inicio/catalogo.png" alt="Catálogo" class="icono-nav" />
+            </a>
+          </li>
+          <li>
+            <a href="#descuentos">
+              <img src="/img/inicio/promociones.png" alt="Descuentos" class="icono-nav" />
+            </a>
+          </li>
+          <li>
+            <a href="#tiendas">
+              <img src="/img/inicio/tiendas.png" alt="Tiendas" class="icono-nav" />
+            </a>
+          </li>
+          <li>
+            <a href="#carrito">
+              <img src="/img/inicio/carrito.png" alt="Carrito" class="icono-nav" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2 class="text-con-borde">🍰 Endulza tu día con nuestros postres artesanales 🍰</h2>
+      <button onclick="verProductos()">Ver Productos</button>
+    </div>
+  </section>
+
+  <section id="productos" class="productos pastel-bg">
+    <div class="container">
+      <h2>
+        <img src="/img/inicio/catalogo.png" alt="Catálogo" class="icono-titulo" />Productos Destacados
+      </h2>
+      <div class="grid">
+        <div class="producto">
+          <img src="/img/inicio/pastel-chocolate.jpg" alt="Pastel de Chocolate" />
+          <h3>Pastel de Chocolate</h3>
+          <p>$25.000</p>
+        </div>
+        <div class="producto">
+          <img src="/img/inicio/cheesecake.jpg" alt="Cheesecake de Fresa" />
+          <h3>Cheesecake de Fresa</h3>
+          <p>$30.000</p>
+        </div>
+        <div class="producto">
+          <img src="/img/inicio/cupcakes.jpg" alt="Cupcakes variados" />
+          <h3>Cupcakes Variados</h3>
+          <p>$18.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="descuentos" class="descuentos">
+    <div class="container">
+      <h2>
+        <img src="/img/inicio/promociones.png" alt="Promociones" class="icono-titulo" />
+        Promociones Dulces
+      </h2>
+      <div class="ofertas">
+        <div class="oferta">
+          <h3>✨ 2x1 en Cupcakes</h3>
+          <p>Solo esta semana en nuestras tiendas físicas.</p>
+        </div>
+        <div class="oferta">
+          <h3>🍓 15% off en Cheesecakes</h3>
+          <p>Promoción válida hasta el viernes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tiendas" class="tiendas pastel-bg">
+    <div class="container">
+      <h2>
+        <img src="/img/inicio/tiendas.png" alt="Tiendas" class="icono-titulo" />
+        Nuestras Sucursales
+      </h2>
+      <ul>
+        <li>📍 Calle 40 #8-30, Bogotá</li>
+        <li>📍 Ac. 26 #62-47, Bogotá</li>
+        <li>📍 Ak 7 #32, Bogotá</li>
+      </ul>
+      <div class="mapa">
+        <iframe 
+          src="https://www.google.com/maps/d/u/0/embed?mid=19XdKqtP7uCXtd9MDtaZyD2fzrNsvzeg&ehbc=2E312F&noprof=1"
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="mapa-embebido">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="carrito" class="carrito">
+    <div class="container">
+      <h2>🛒 Tu Carrito</h2>
+      <p>Actualmente no hay productos en tu carrito.</p>
+      
+      <!-- Botón de pagar con imagen de billete -->
+      <a href="carrito.html">
+        <button class="boton-billete">
+          <img src="/img/inicio/pago.png" alt="Pagar" class="icono-billete" />
+        </button>
+      </a>
+
+      <!-- Botón seguir comprando -->
+      <button onclick="verProductos()">Seguir Comprando</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Dulce Tentación. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="/js/inicio.js"></script>
+</body>
+</html>

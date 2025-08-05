@@ -1,0 +1,285 @@
+/* ============================== */
+/*             HEADER            */
+/* ============================== */
+.main-header {
+  background-color: #ffe9ee;
+  background-image: repeating-radial-gradient(circle, #fbb8c5 0px, #fbb8c5 1px, transparent 3px, transparent 20px);
+  background-size: 30px 30px;
+  background-position: center;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.titulo-pagina {
+  text-align: center;
+  font-size: 3rem;
+  color: #c25e79;
+  text-shadow: 0 2px 4px rgba(255, 174, 200, 0.5);
+}
+
+
+/* ============================== */
+/*              BODY             */
+/* ============================== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffecf3;
+  font-family: 'Cherry Swash', cursive;
+}
+
+
+/* ============================== */
+/*      CONTENEDOR PRINCIPAL     */
+/* ============================== */
+.carrito-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  flex-wrap: nowrap;
+}
+
+.carrito-izquierda {
+  flex: 0 0 60%;
+  margin-right: 2rem;
+}
+
+.carrito-derecha {
+  flex: 0 0 40%;
+}
+
+
+/* ============================== */
+/*        CAJAS DE CONTENIDO     */
+/* ============================== */
+.carrito-container,
+.formulario-pse {
+  background-color: #fff6fb;
+  padding: 2rem 5rem;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(255, 170, 200, 0.3);
+}
+
+
+/* ============================== */
+/*           RESPONSIVE          */
+/* ============================== */
+@media (max-width: 768px) {
+  .carrito-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .carrito-izquierda,
+  .carrito-derecha {
+    flex: 1 1 100%;
+  }
+}
+
+
+/* ============================== */
+/*           TÍTULOS             */
+/* ============================== */
+.titulo-carrito {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #a64d69;
+  text-align: center;
+}
+
+.formulario-pse h3 {
+  font-size: 1.8rem;
+  color: #c25e79;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+
+/* ============================== */
+/*       FORMULARIO PSE          */
+/* ============================== */
+.formulario-pse label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #944d66;
+  text-align: left;
+}
+
+.formulario-pse input,
+.formulario-pse select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ffb3c9;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+  font-family: 'Cherry Swash', cursive;
+}
+
+.icono-pse {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: -5rem auto -5rem auto;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+
+/* ============================== */
+/*      PRODUCTOS CARRITO        */
+/* ============================== */
+.producto-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 2px dashed #ffc0cb;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(255, 192, 203, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.producto-carrito:hover {
+  transform: scale(1.02);
+}
+
+.img-carrito {
+  width: 160px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 145, 180, 0.2);
+  margin-right: 1rem;
+}
+
+.producto-carrito h3 {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  color: #863849;
+  margin: 0;
+  text-align: left;
+}
+
+.producto-carrito p {
+  font-size: 1.3rem;
+  color: #6e3e51;
+  margin: 0;
+  white-space: nowrap;
+}
+
+
+/* ============================== */
+/*          BOTÓN PAGAR          */
+/* ============================== */
+.boton-pagar {
+  margin-top: 1rem;
+  background-color: #ff91af;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.boton-pagar:hover {
+  background-color: #f36c8e;
+  transform: scale(1.05);
+}
+
+.boton-pagar img {
+  width: 30px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+
+/* ============================== */
+/*          BOTÓN VOLVER         */
+/* ============================== */
+.boton-volver {
+  background-color: #fbc7da;
+  color: #912f4c;
+  font-size: 1.1rem;
+  border: 2px solid #f993a8;
+  border-radius: 25px;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.boton-volver:hover {
+  background-color: #ffe2ec;
+  color: #6a1f35;
+  border-color: #ff99b7;
+}
+
+
+/* ============================== */
+/*        MENSAJES FINALES       */
+/* ============================== */
+.mensaje-compra {
+  margin-top: 1.5rem;
+  background-color: #ffe6ef;
+  border: 2px dashed #ff99b7;
+  padding: 1.2rem;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #6a1f35;
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.2);
+  text-align: center;
+}
+
+.mensaje-final {
+  text-align: center;
+  background-color: #fff0f5;
+  border: 2px dashed #ffa3b8;
+  border-radius: 30px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.25);
+  max-width: 600px;
+  margin: 3rem auto;
+  font-family: 'Cherry Swash', cursive;
+}
+
+.mensaje-final h2 {
+  color: #c25e79;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.mensaje-final p {
+  color: #944d66;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.boton-volver-inicio {
+  background-color: #ff91af;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-volver-inicio:hover {
+  background-color: #f36c8e;
+}
