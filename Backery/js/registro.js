@@ -1,12 +1,6 @@
-/* ============================== */
-/*     INICIALIZACIÓN DOM        */
-/* ============================== */
 document.addEventListener("DOMContentLoaded", () => {
   const boton = document.getElementById("boton-registro");
 
-  /* ============================== */
-  /*      ANIMACIÓN DE REGISTRO    */
-  /* ============================== */
   if (boton) {
     boton.addEventListener("click", function (e) {
       e.preventDefault();
@@ -14,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const texto = boton.querySelector(".texto-boton");
       const icono = boton.querySelector(".icono-boton");
 
+      // Accesibilidad: Oculta visualmente pero no elimina del árbol
       texto.style.opacity = "0";
       boton.classList.add("mostrando-icono");
 
@@ -21,16 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
         boton.classList.remove("mostrando-icono");
         icono.style.opacity = "0";
 
-        // Redirigir a la página de inicio
+        // Redirige luego de confirmación visible
         window.location.href = "inicioPasteleria.html";
       }, 1000);
     });
   }
 
-  /* ============================== */
-  /*     CAMBIO A FORM DE LOGIN    */
-  /* ============================== */
-  const switchBtn = document.getElementById("cambiar-a-login");
+  const switchBtn = document.getElementById("enlace-login");
   const formContainer = document.querySelector(".form-container");
 
   if (switchBtn && formContainer) {
@@ -38,31 +30,36 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       formContainer.innerHTML = `
-        <h1 class="titulo-pagina">🎂 Bienvenidos a Dulce Encanto 🍩</h1>
+        <h1 class="titulo-pagina">🎂 Bienvenidos a Dulce Tentación 🍩</h1>
         <h2>Iniciar Sesión</h2>
-        <form action="/login" method="POST">
-          <input type="email" name="correo" placeholder="Correo electrónico" required />
-          <input type="password" name="contraseña" placeholder="Contraseña" required />
-          <button type="submit" id="boton-login">
+        <form action="/login" method="POST" aria-labelledby="form-login">
+          <label for="login-correo">Correo electrónico</label>
+          <input type="email" id="login-correo" name="correo" required aria-required="true" />
+
+          <label for="login-contraseña">Contraseña</label>
+          <input type="password" id="login-contraseña" name="contraseña" required aria-required="true" />
+
+          <button type="submit" id="boton-login" aria-label="Iniciar sesión">
             <span class="texto-boton">🔐 Iniciar Sesión</span>
-            <img class="icono-boton" src="/img/registro/ok-check.png" alt="Login OK" />
+            <img class="icono-boton" src="/img/registro/ok-check.png" alt="" aria-hidden="true" />
           </button>
         </form>
         <div class="switch-form">
-          ¿No tienes cuenta? <a href="#" id="cambiar-a-registro">Crear una</a>
+          ¿No tienes cuenta? <a href="#" id="volver-a-registro" aria-label="Volver al formulario de registro">Crear una</a>
         </div>
       `;
 
       activarAnimacionBoton("boton-login");
       activarCambioFormulario();
+
+      // Accesibilidad: Foco automático al primer input del nuevo formulario
+      const primerInput = document.getElementById("login-correo");
+      if (primerInput) primerInput.focus();
     });
   }
 
-  /* ============================== */
-  /*    ANIMACIÓN BOTÓN LOGIN      */
-  /* ============================== */
-  function activarAnimacionBoton(botonId) {
-    const nuevoBoton = document.getElementById(botonId);
+  function activarAnimacionBoton(idBoton) {
+    const nuevoBoton = document.getElementById(idBoton);
     if (nuevoBoton) {
       nuevoBoton.addEventListener("click", function (e) {
         e.preventDefault();
@@ -83,17 +80,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* ============================== */
-  /*    VOLVER A FORM DE REGISTRO  */
-  /* ============================== */
   function activarCambioFormulario() {
-    const volverRegistro = document.getElementById("cambiar-a-registro");
-    if (volverRegistro) {
-      volverRegistro.addEventListener("click", (e) => {
+    const volver = document.getElementById("volver-a-registro");
+    if (volver) {
+      volver.addEventListener("click", (e) => {
         e.preventDefault();
-        location.reload(); // Recarga la página para volver al formulario de registro original
+        location.reload(); // Recarga para volver al formulario original con accesibilidad
       });
     }
   }
 });
+
 
