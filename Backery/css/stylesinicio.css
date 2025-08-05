@@ -3,7 +3,6 @@
 /* ============================== */
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
 
-
 /* ============================== */
 /*             RESET             */
 /* ============================== */
@@ -13,14 +12,13 @@
   box-sizing: border-box;
 }
 
-
 /* ============================== */
 /*           BASE BODY           */
 /* ============================== */
 body {
   font-family: 'Cherry Swash', cursive;
   background-color: #fffdfc;
-  color: #6a3d4f;
+  color: #4a1f2d; /* Contraste mejorado */
   line-height: 1.6;
 }
 
@@ -29,7 +27,6 @@ body {
   max-width: 1200px;
   margin: auto;
 }
-
 
 /* ============================== */
 /*            HEADER             */
@@ -55,7 +52,7 @@ body {
 .titulo-pagina {
   text-align: center;
   font-size: 3rem;
-  color: #c25e79;
+  color: #a1234d; /* contraste ajustado */
   text-shadow: 0 2px 4px rgba(255, 174, 200, 0.5);
 }
 
@@ -70,7 +67,7 @@ body {
 
 .nav-links li a {
   text-decoration: none;
-  color: #6a3d4f;
+  color: #4a1f2d; /* contraste mejorado */
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -88,7 +85,6 @@ body {
 .nav-links li a[href="#carrito"] .icono-nav {
   filter: contrast(1.1) brightness(0.75);
 }
-
 
 /* ============================== */
 /*            ICONOS             */
@@ -113,7 +109,6 @@ body {
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
-
 /* ============================== */
 /*             HERO              */
 /* ============================== */
@@ -125,12 +120,12 @@ body {
 
 .hero h2 {
   font-size: 2rem;
-  color: #c25e79;
+  color: #a1234d; /* contraste ajustado */
   margin-bottom: 1.5rem;
 }
 
 .hero button {
-  background-color: #fbb8c5;
+  background-color: #f986aa;
   border: none;
   color: white;
   padding: 0.8rem 1.5rem;
@@ -141,9 +136,8 @@ body {
 }
 
 .hero button:hover {
-  background-color: #f993a8;
+  background-color: #dc6b8f;
 }
-
 
 /* ============================== */
 /*     SECCIONES GENERALES       */
@@ -155,10 +149,9 @@ section {
 h2 {
   text-align: center;
   font-size: 2rem;
-  color: #c25e79;
+  color: #a1234d;
   margin-bottom: 2rem;
 }
-
 
 /* ============================== */
 /*           PRODUCTOS           */
@@ -192,7 +185,6 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-
 /* ============================== */
 /*           DESCUENTOS          */
 /* ============================== */
@@ -218,14 +210,13 @@ h2 {
   box-shadow: 0 0 15px rgba(255, 134, 155, 0.2);
 }
 
-
 /* ============================== */
 /*            TIENDAS            */
 /* ============================== */
 .tiendas ul {
   list-style: none;
   margin-top: 1rem;
-  color: #944d66;
+  color: #6a3d4f;
   padding: 0;
 }
 
@@ -249,7 +240,6 @@ h2 {
   margin-top: 2rem;
 }
 
-
 /* ============================== */
 /*            CARRITO            */
 /* ============================== */
@@ -262,7 +252,7 @@ h2 {
   margin-top: 1rem;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  background-color: #fbb8c5;
+  background-color: #f986aa;
   border: none;
   border-radius: 25px;
   color: white;
@@ -271,9 +261,8 @@ h2 {
 }
 
 .carrito button:hover {
-  background-color: #f993a8;
+  background-color: #dc6b8f;
 }
-
 
 /* ============================== */
 /*      BOTÓN DE BILLETE         */
@@ -292,19 +281,17 @@ h2 {
   transform: scale(1.1);
 }
 
-
 /* ============================== */
 /*            FOOTER             */
 /* ============================== */
 footer {
   background-color: #ffe9ee;
-  color: #944d66;
+  color: #6a3d4f;
   text-align: center;
   padding: 2rem 0;
   margin-top: 2rem;
   font-size: 0.9rem;
 }
-
 
 /* ============================== */
 /*          UTILIDADES           */
@@ -312,4 +299,6 @@ footer {
 .pastel-bg {
   background: linear-gradient(to bottom, #fffdfc 0%, #fff5f8 100%);
 }
+
+
 
